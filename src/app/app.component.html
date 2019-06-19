@@ -1,21 +1,31 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<h3 style="padding-left: 15px; padding-top: 10px">Modelado - Análisis Numérico:</h3>
+<div class="input-group col-md-4" style="padding-top: 10px">
+  <input [(ngModel)]="funcionInput" type="text" class="form-control" placeholder="Ingresar fórmula"
+    aria-label="Escribir fórmula" aria-describedby="basic-addon2">
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="input-group col-md-4" style="padding-top: 20px">
+  <input [(ngModel)]="hInput" type="text" class="form-control" placeholder="Ingresar h" aria-label="Ingresar h"
+    aria-describedby="basic-addon2">
+</div>
+<div class="input-group col-md-4" style="padding-top: 20px">
+  <input [(ngModel)]="bInput" type="text" class="form-control" placeholder="Ingresar b" aria-label="Ingresar b"
+    aria-describedby="basic-addon2">
+</div>
+<div class="input-group col-md-4" style="padding-top: 20px">
+  <input [(ngModel)]="t0Input" type="text" class="form-control" placeholder="Ingresar t0" aria-label="Ingresar t0"
+    aria-describedby="basic-addon2">
+</div>
+<div class="input-group col-md-4" style="padding-top: 20px">
+  <input [(ngModel)]="x0Input" type="text" class="form-control" placeholder="Ingresar x0" aria-label="Ingresar x0"
+    aria-describedby="basic-addon2">
+  <div class="input-group-append">
+    <button type="submit" class="btn btn-outline-secondary" (click)="guardarFuncion()">Guardar</button>
+  </div>
+</div>
 
+<!-- <div *ngIf="b !== 0"> -->
+  <app-line-chart  ></app-line-chart>
+  <app-line-chart1  ></app-line-chart1>
+  <app-line-chart2  ></app-line-chart2>
+<!-- </div> -->
 <router-outlet></router-outlet>
